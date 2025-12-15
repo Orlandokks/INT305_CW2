@@ -1,0 +1,28 @@
+name: int305_gpu
+
+dependencies:
+  # Python 版本
+  - python=3.10
+
+  # ✅ 关键：GPU 版 PyTorch（来自 conda-forge，不需要 nvidia channel）
+  - pytorch-gpu
+  - torchvision
+  - torchaudio
+
+  # 科学计算 & 画图
+  - numpy
+  - matplotlib
+  - pillow
+
+  # Jupyter 内核支持
+  - ipykernel
+
+  # 允许用 pip 装额外包
+  - pip
+  - pip:
+      # 一些常见的小依赖，其实很多会被上面包自动带上
+      - cycler
+      - kiwisolver
+      - pyparsing
+      - python-dateutil
+      - pytz
